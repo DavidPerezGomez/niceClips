@@ -4,6 +4,7 @@ history -r script_history
 session_name="clips_session"
 
 screen_installed() {
+    # TODO actually implement this
     return 0 #true
     # return 1 #false
 }
@@ -52,6 +53,7 @@ main_loop() {
     do
         read -e -p $promt input
         history -s "$input"
+        # TODO implement parser to add commands such as 'load', etc.
         run_remote $input
         # honestly, i have no idea what this code below does, but it works wonders
         # history code taken from Chris Pacejos answer
